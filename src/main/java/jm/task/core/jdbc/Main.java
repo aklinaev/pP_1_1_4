@@ -13,18 +13,13 @@ public class Main {
     public static void main(String[] args) {
         UserServiceImpl us = new UserServiceImpl();
         us.createUsersTable();
-//        us.dropUsersTable();
-//        us.saveUser("arletta", "penrose", (byte) 30);
-//        us.saveUser("liza", "besporiadok", (byte) 9);
-//        us.saveUser("liza", "vporiadke", (byte) 15);
-//        us.saveUser("liza", "pipiska", (byte) 17);
-//        us.dropUsersTable();
-//        us.removeUserById(6);
-
-//        List<User> select = us.getAllUsers();
-//        select.stream().forEach(System.out::println);
-
-//        us.getAllUsers();
-//        us.cleanUsersTable();
+        us.saveUser("arletta", "penrose", (byte) 30);
+        us.saveUser("liza", "besporiadok", (byte) 9);
+        us.saveUser("liza", "vporiadke", (byte) 15);
+        us.saveUser("liza", "pipiska", (byte) 17);
+        List<User> select = us.getAllUsers();
+        select.stream().forEach(System.out::println);
+        us.cleanUsersTable();
+        us.dropUsersTable();
     }
 }
